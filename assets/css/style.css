@@ -1,0 +1,325 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Forum&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+--primary:#536942;
+--secondary:#ffd936;
+--white: #efefef;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--primary);
+}
+
+
+img {
+max-width: 300px;
+max-height: 300ox;
+}
+
+#main {
+background-image: url(../images/pexels-bg-sky.jpg);
+min-height: 70vh;
+background-position: bottom center;
+background-size: cover;
+}
+
+a {
+text-decoration: none;
+}
+
+
+.container {
+max-width: 1200px;
+padding: 16px;
+margin: auto;
+}
+
+section:not(:first-child) {
+    margin: 80px auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+    align-items: center;
+}
+
+.nav-list a {
+    color: var(--white);
+    text-shadow: 2px 2px black;
+}
+
+
+
+.btn {
+
+    padding: 12px 20px;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-secondary {
+    border: 2px solid var(--white);
+    color: var(--white);
+    font-weight: bold;
+    text-shadow: 2px 2px black;
+}
+
+.btn-primary {
+    border: none;
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    color: var(--white);
+}
+
+.main-content .intro-heading {
+    font-size: 50px;
+}
+
+.main-content .main-heading {
+    font-size: 120px;
+    margin-top: -20px;
+}
+
+
+.main-content p {
+    max-width: 250px;
+    margin-bottom: 10px;
+}
+
+
+
+.menu-burger-btn {
+color: var(--white);
+font-size: 40px;
+text-shadow: 2px 2px black;
+position: absolute;
+top: 20px;
+right: 40px;
+display: none;
+} 
+
+.section-title h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.section-title .line {
+    width: 150px;
+    height: 4px;
+    border: 10px;
+    background: var(--secondary);
+    margin: auto;
+}
+
+.services {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap; /* boxes drop down to next row, on smaller screens */
+    
+}
+
+.service {
+    width: 350px;
+}
+
+.service img { 
+    max-width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* delays movement */
+}
+
+/* makes img slightly larger on hover */
+.service img:hover {
+    transform: scale(1.05);
+}
+
+#testimonial {
+    background: rgb(194, 192, 202);
+}
+
+#testimonial img {
+max-width: 300px;
+max-height: 200px;
+border-radius: 50%;
+}
+
+
+#testimonial .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    gap: 30px;
+    padding: 50px 16px;
+}
+
+#testimonial h2 {
+    font-size: 20px;
+    font-family: 'Forum', sans-serif;
+    text-align: center;
+    padding: 5px 15px;
+}
+
+#testimonial .quotes {
+    font-size: 50px;
+}
+
+#testimonial .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-us .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 120px;
+    
+}
+
+#about-us .container .about-content {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: start;
+}
+
+#about-us .container .about-content h1 {
+    font-family: 'Forum', sans-serif;
+    font-size: 20px;
+}
+
+#questions {
+    min-height: 500px;
+    background-image: url('../images/pexels-bottoom.jpg');
+    background-size: cover;
+}
+#questions .container {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    text-align: center;
+}
+
+#questions h1 {
+    font-size: 50px;
+}
+
+footer {
+margin-top: -60px;
+}
+
+footer .container {
+    display: flex;
+    padding: 20px 16px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    list-style: none;
+}
+
+
+@media screen and (max-width:520px) {
+    .nav-list {
+        flex-direction: column;
+        background: gray;
+        position: absolute;
+        top: 0;
+        /* right: -430px; */
+        width: 80%;
+        height: 100vh;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }  
+
+    .nav-list.active{
+        right: 0;
+    }
+
+    .nav-list li:not(:last-child) {
+        text-align: left;
+        width: 100%;
+        padding: 10px 30px;
+        border-bottom: 1px solid var(--white);
+    }
+
+
+    .menu-burger-btn {
+        color: var(--white);
+        font-size: 40px;
+        text-shadow: 2px 2px black;
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        display: block;
+        }
+
+
+    #about-us .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #footer .container {
+       flex-direction: column;
+       gap: 16px; 
+    }
+
+}
+
+
+
+
+
+.logo {
+color: var(--white);
+font-size: 60px;
+text-shadow: 2px 2px black;
+}
+
+.footerLogo {
+color: var(--white);
+font-size: 60px;
+text-shadow: 2px 2px black;
+}
