@@ -103,7 +103,7 @@ nav {
 }
 
 .main-content .main-heading {
-    font-size: 120px;
+    font-size: 100px;
     margin-top: -20px;
 }
 
@@ -154,6 +154,7 @@ display: none;
 .service img { 
     max-width: 100%;
     border-radius: 5px;
+    min-height: 300px;
     transition: transform 0.3s ease; /* delays movement */
 }
 
@@ -218,7 +219,7 @@ border-radius: 50%;
 
 #about-us .container .about-content h1 {
     font-family: 'Forum', sans-serif;
-    font-size: 20px;
+    font-size: 40px;
 }
 
 #questions {
@@ -231,32 +232,60 @@ border-radius: 50%;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    align-items: center;
-    justify-content: center;
+    align-items:center; 
     height: 500px;
-    text-align: center;
+    text-align: center; 
 }
 
+.pt-4 {
+    padding-top: 40px;
+}
+
+.mt-4 {
+    margin-top: 40px;
+}
 #questions h1 {
     font-size: 50px;
 }
 
+#questions p {
+    color: var(--white);
+    text-shadow: 2px 2px black;
+}
+
 footer {
 margin-top: -60px;
-}
+} 
 
 footer .container {
     display: flex;
     padding: 20px 16px;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column!important;
 }
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+}
+
 
 .footer-links {
     display: flex;
     align-items: center;
     gap: 16px;
     list-style: none;
+}
+
+footer a {
+    color: var(--primary);
+    font-size: 20px;
+}
+
+footer p {
+    color: var(--primary);
+    font-size: 20px;
 }
 
 
@@ -266,9 +295,9 @@ footer .container {
         background: gray;
         position: absolute;
         top: 0;
-        /* right: -430px; */
+        right: -930px; 
         width: 80%;
-        height: 100vh;
+        height: 60vh;
         padding-top: 80px;
         transition: all 0.3s ease;
     }  
@@ -301,10 +330,20 @@ footer .container {
         gap: 30px;
     }
 
-    #footer .container {
+    footer .container {
+        display: flex;
        flex-direction: column;
        gap: 16px; 
     }
+
+
+
+
+    .footerLogo {
+        color: var(--primary);
+        font-size: 40px;
+        text-shadow: 2px 2px black;
+}
 
 }
 
@@ -319,7 +358,7 @@ text-shadow: 2px 2px black;
 }
 
 .footerLogo {
-color: var(--white);
+color: var(--primary);
 font-size: 60px;
 text-shadow: 2px 2px black;
 }
